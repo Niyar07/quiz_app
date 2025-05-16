@@ -3,7 +3,9 @@
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.startQuiz, {super.key});
+
+  final void Function() startQuiz;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -30,7 +32,7 @@ class StartScreen extends StatelessWidget {
             foregroundColor: const Color.fromARGB(255, 18, 15, 194),
             backgroundColor: const Color.fromRGBO(38, 255, 251, 0.903),
           ),
-          onPressed: () {},
+          onPressed: startQuiz,
           icon: Icon(
             Icons.arrow_right_alt,
             color: const Color.fromARGB(255, 18, 15, 194),
